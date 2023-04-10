@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.3 on win32)" generated="20230410 19:02:48.086" rpa="false" schemaversion="3">
+<suite id="s1" name="Robot Interactive Console" source="c:\Users\ASUS\.vscode\extensions\robocorp.robotframework-lsp-1.9.0\src\robotframework_ls\vendored\robotframework_interactive\robot_interactive_console.robot">
+<test id="s1-t1" name="Default Task/Test" line="5">
+<kw name="Interpreter Main Loop" library="MainLoop">
+<kw name="Input Text">
+<arg>//*[@id='input_48']</arg>
+<arg>12345</arg>
+<msg timestamp="20230410 19:02:48.728" level="FAIL">No keyword with name 'Input Text' found.</msg>
+<status status="FAIL" starttime="20230410 19:02:48.728" endtime="20230410 19:02:48.728"/>
+</kw>
+<kw name="Input Text">
+<arg>//*[@id='input_49']</arg>
+<arg>Doe</arg>
+<status status="NOT RUN" starttime="20230410 19:02:48.730" endtime="20230410 19:02:48.730"/>
+</kw>
+<kw name="Input Text">
+<arg>//*[@id='input_14']</arg>
+<arg>1234567890</arg>
+<status status="NOT RUN" starttime="20230410 19:02:48.730" endtime="20230410 19:02:48.731"/>
+</kw>
+<kw name="Input Text">
+<arg>//*[@id='input_6']</arg>
+<arg>john.doe@example.com</arg>
+<status status="NOT RUN" starttime="20230410 19:02:48.731" endtime="20230410 19:02:48.731"/>
+</kw>
+<kw name="Input Text">
+<arg>//*[@id='input_27_full']</arg>
+<arg>1234567890</arg>
+<status status="NOT RUN" starttime="20230410 19:02:48.732" endtime="20230410 19:02:48.732"/>
+</kw>
+<kw name="Click Element">
+<arg>//*[@id='label_input_51_0']</arg>
+<status status="NOT RUN" starttime="20230410 19:02:48.733" endtime="20230410 19:02:48.733"/>
+</kw>
+<kw name="Click Button">
+<arg>//*[@id='form-pagebreak-next_76']</arg>
+<status status="NOT RUN" starttime="20230410 19:02:48.734" endtime="20230410 19:02:48.734"/>
+</kw>
+<kw name="Wait Until Page Contains">
+<arg>This field should be a string.</arg>
+<status status="NOT RUN" starttime="20230410 19:02:48.735" endtime="20230410 19:02:48.735"/>
+</kw>
+<status status="PASS" starttime="20230410 19:02:48.093" endtime="20230410 19:02:57.327"/>
+</kw>
+<status status="PASS" starttime="20230410 19:02:48.093" endtime="20230410 19:02:57.327"/>
+</test>
+<status status="PASS" starttime="20230410 19:02:48.087" endtime="20230410 19:02:57.328"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot Interactive Console">Robot Interactive Console</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

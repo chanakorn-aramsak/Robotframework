@@ -1,0 +1,1237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.3 on win32)" generated="20230410 20:01:46.344" rpa="false" schemaversion="3">
+<suite id="s1" name="Simple" source="C:\Users\ASUS\Desktop\robot_student_registration\testcases\master\simple.robot">
+<test id="s1-t1" name="All input field test" line="12">
+<kw name="Open browser student registration form" library="homepage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${WEB_URL}</arg>
+<arg>${WEB_BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230410 20:01:46.519" level="INFO">Opening browser 'chrome' to base url 'https://form.jotform.com/212934779973474'.</msg>
+<status status="PASS" starttime="20230410 20:01:46.518" endtime="20230410 20:01:49.594"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230410 20:01:49.594" endtime="20230410 20:01:49.716"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230410 20:01:51.716" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230410 20:01:49.716" endtime="20230410 20:01:51.716"/>
+</kw>
+<status status="PASS" starttime="20230410 20:01:46.518" endtime="20230410 20:01:51.716"/>
+</kw>
+<kw name="Wait student registration load complete" library="homepage">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>//*[@id='header_1']</arg>
+<arg>${test_data_form_name}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20230410 20:01:51.716" endtime="20230410 20:01:51.735"/>
+</kw>
+<status status="PASS" starttime="20230410 20:01:51.716" endtime="20230410 20:01:51.735"/>
+</kw>
+<kw name="Input and verify firstname" library="homepage">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id='input_48']</arg>
+<arg>${test_data_firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230410 20:01:51.736" level="INFO">Typing text 'studentFirstName' into text field '//*[@id='input_48']'.</msg>
+<status status="PASS" starttime="20230410 20:01:51.736" endtime="20230410 20:01:51.800"/>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<var>${firstname}</var>
+<arg>//*[@id='input_48']</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<msg timestamp="20230410 20:01:51.814" level="INFO">${firstname} = studentFirstName</msg>
+<status status="PASS" starttime="20230410 20:01:51.800" endtime="20230410 20:01:51.820"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${firstname}</arg>
+<arg>${test_data_firstname}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230410 20:01:51.820" endtime="20230410 20:01:51.820"/>
+</kw>
+<status status="PASS" starttime="20230410 20:01:51.735" endtime="20230410 20:01:51.820"/>
+</kw>
+<kw name="Input and verify lastname" library="homepage">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id='input_49']</arg>
+<arg>${test_data_firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230410 20:01:51.822" level="INFO">Typing text 'studentFirstName' into text field '//*[@id='input_49']'.</msg>
+<status status="PASS" starttime="20230410 20:01:51.821" endtime="20230410 20:01:51.887"/>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<var>${lastname}</var>
+<arg>//*[@id='input_49']</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<msg timestamp="20230410 20:01:51.897" level="INFO">${lastname} = studentFirstName</msg>
+<status status="PASS" starttime="20230410 20:01:51.887" endtime="20230410 20:01:51.897"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${lastname}</arg>
+<arg>${test_data_firstname}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230410 20:01:51.897" endtime="20230410 20:01:51.897"/>
+</kw>
+<status status="PASS" starttime="20230410 20:01:51.820" endtime="20230410 20:01:51.897"/>
+</kw>
+<kw name="Input and verify gender with male" library="homepage">
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>//*[@id='input_3']</arg>
+<arg>${test_data_gender}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20230410 20:01:51.897" level="INFO">Selecting options from selection list '//*[@id='input_3']' by value Male.</msg>
+<status status="PASS" starttime="20230410 20:01:51.897" endtime="20230410 20:01:51.955"/>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<var>${gender}</var>
+<arg>//*[@id='input_3']</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<msg timestamp="20230410 20:01:51.967" level="INFO">${gender} = Male</msg>
+<status status="PASS" starttime="20230410 20:01:51.955" endtime="20230410 20:01:51.967"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${gender}</arg>
+<arg>${test_data_gender}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230410 20:01:51.967" endtime="20230410 20:01:51.967"/>
+</kw>
+<status status="PASS" starttime="20230410 20:01:51.897" endtime="20230410 20:01:51.967"/>
+</kw>
+<kw name="Input and verify student_id" library="homepage">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id='input_14']</arg>
+<arg>${test_data_student_id}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230410 20:01:51.967" level="INFO">Typing text '6299999999' into text field '//*[@id='input_14']'.</msg>
+<status status="PASS" starttime="20230410 20:01:51.967" endtime="20230410 20:01:52.029"/>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<var>${student_id}</var>
+<arg>//*[@id='input_14']</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<msg timestamp="20230410 20:01:52.036" level="INFO">${student_id} = 6299999999</msg>
+<status status="PASS" starttime="20230410 20:01:52.029" endtime="20230410 20:01:52.036"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${student_id}</arg>
+<arg>${test_data_student_id}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230410 20:01:52.036" endtime="20230410 20:01:52.036"/>
+</kw>
+<status status="PASS" starttime="20230410 20:01:51.967" endtime="20230410 20:01:52.036"/>
+</kw>
+<kw name="Input and verify mobile_number" library="homepage">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id='input_27_full']</arg>
+<arg>${test_data_mobile_number}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230410 20:01:52.036" level="INFO">Typing text '0899999999' into text field '//*[@id='input_27_full']'.</msg>
+<status status="PASS" starttime="20230410 20:01:52.036" endtime="20230410 20:01:52.123"/>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<var>${mobile_number}</var>
+<arg>//*[@id='input_27_full']</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<msg timestamp="20230410 20:01:52.133" level="INFO">${mobile_number} = (089) 999-9999</msg>
+<status status="PASS" starttime="20230410 20:01:52.123" endtime="20230410 20:01:52.133"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${mobile_number}</arg>
+<arg>(089) 999-9999</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230410 20:01:52.133" endtime="20230410 20:01:52.133"/>
+</kw>
+<status status="PASS" starttime="20230410 20:01:52.036" endtime="20230410 20:01:52.133"/>
+</kw>
+<kw name="Input and verify email" library="homepage">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id='input_6']</arg>
+<arg>${test_data_email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230410 20:01:52.133" level="INFO">Typing text 'studentName@chula.ac.th' into text field '//*[@id='input_6']'.</msg>
+<status status="PASS" starttime="20230410 20:01:52.133" endtime="20230410 20:01:52.206"/>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<var>${email}</var>
+<arg>//*[@id='input_6']</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<msg timestamp="20230410 20:01:52.217" level="INFO">${email} = studentName@chula.ac.th</msg>
+<status status="PASS" starttime="20230410 20:01:52.206" endtime="20230410 20:01:52.217"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${email}</arg>
+<arg>${test_data_email}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230410 20:01:52.217" endtime="20230410 20:01:52.217"/>
+</kw>
+<status status="PASS" starttime="20230410 20:01:52.133" endtime="20230410 20:01:52.217"/>
+</kw>
+<kw name="Click study time" library="homepage">
+<kw name="Click Element" library="commonKeywords">
+<arg>//*[@id='label_input_51_0']</arg>
+<doc>${locator} - could be any selenium locator and webelement object
+${timeout} - &lt;optional&gt;
+Make sure that 15 can be accessed globally</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230410 20:01:52.217" endtime="20230410 20:01:52.236"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230410 20:01:52.237" level="INFO">Clicking element '//*[@id='label_input_51_0']'.</msg>
+<status status="PASS" starttime="20230410 20:01:52.236" endtime="20230410 20:01:52.265"/>
+</kw>
+<status status="PASS" starttime="20230410 20:01:52.217" endtime="20230410 20:01:52.265"/>
+</kw>
+<status status="PASS" starttime="20230410 20:01:52.217" endtime="20230410 20:01:52.265"/>
+</kw>
+<kw name="Click submit application" library="homepage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id='form-pagebreak-next_76']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230410 20:01:52.266" endtime="20230410 20:01:52.279"/>
+</kw>
+<kw name="Click Element" library="commonKeywords">
+<arg>//*[@id='form-pagebreak-next_76']</arg>
+<doc>${locator} - could be any selenium locator and webelement object
+${timeout} - &lt;optional&gt;
+Make sure that 15 can be accessed globally</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230410 20:01:52.286" endtime="20230410 20:01:52.303"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230410 20:01:52.304" level="INFO">Clicking element '//*[@id='form-pagebreak-next_76']'.</msg>
+<status status="PASS" starttime="20230410 20:01:52.304" endtime="20230410 20:01:52.346"/>
+</kw>
+<status status="PASS" starttime="20230410 20:01:52.286" endtime="20230410 20:01:52.346"/>
+</kw>
+<status status="PASS" starttime="20230410 20:01:52.266" endtime="20230410 20:01:52.346"/>
+</kw>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20230410 20:01:52.346" endtime="20230410 20:01:53.264"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230410 20:01:53.264" endtime="20230410 20:01:59.493"/>
+</kw>
+<tag>all input</tag>
+<status status="PASS" starttime="20230410 20:01:46.516" endtime="20230410 20:01:59.493"/>
+</test>
+<test id="s1-t2" name="Firstname required test" line="27">
+<kw name="Open browser student registration form" library="homepage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${WEB_URL}</arg>
+<arg>${WEB_BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230410 20:01:59.499" level="INFO">Opening browser 'chrome' to base url 'https://form.jotform.com/212934779973474'.</msg>
+<status status="PASS" starttime="20230410 20:01:59.499" endtime="20230410 20:02:02.324"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230410 20:02:02.325" endtime="20230410 20:02:02.448"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230410 20:02:04.449" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230410 20:02:02.448" endtime="20230410 20:02:04.449"/>
+</kw>
+<status status="PASS" starttime="20230410 20:01:59.493" endtime="20230410 20:02:04.449"/>
+</kw>
+<kw name="Wait student registration load complete" library="homepage">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>//*[@id='header_1']</arg>
+<arg>${test_data_form_name}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20230410 20:02:04.449" endtime="20230410 20:02:04.469"/>
+</kw>
+<status status="PASS" starttime="20230410 20:02:04.449" endtime="20230410 20:02:04.469"/>
+</kw>
+<kw name="Click submit application" library="homepage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id='form-pagebreak-next_76']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230410 20:02:04.470" endtime="20230410 20:02:04.489"/>
+</kw>
+<kw name="Click Element" library="commonKeywords">
+<arg>//*[@id='form-pagebreak-next_76']</arg>
+<doc>${locator} - could be any selenium locator and webelement object
+${timeout} - &lt;optional&gt;
+Make sure that 15 can be accessed globally</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230410 20:02:04.490" endtime="20230410 20:02:04.505"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230410 20:02:04.506" level="INFO">Clicking element '//*[@id='form-pagebreak-next_76']'.</msg>
+<status status="PASS" starttime="20230410 20:02:04.506" endtime="20230410 20:02:04.548"/>
+</kw>
+<status status="PASS" starttime="20230410 20:02:04.490" endtime="20230410 20:02:04.548"/>
+</kw>
+<status status="PASS" starttime="20230410 20:02:04.469" endtime="20230410 20:02:04.548"/>
+</kw>
+<kw name="Verify firstname is required" library="homepage">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>//*[@id='cid_48']//*[@class='form-error-message']</arg>
+<arg>${test_data_error_message}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20230410 20:02:04.548" endtime="20230410 20:02:04.561"/>
+</kw>
+<status status="PASS" starttime="20230410 20:02:04.548" endtime="20230410 20:02:04.561"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230410 20:02:04.561" endtime="20230410 20:02:10.797"/>
+</kw>
+<tag>firstname</tag>
+<status status="PASS" starttime="20230410 20:01:59.493" endtime="20230410 20:02:10.797"/>
+</test>
+<test id="s1-t3" name="Lastname required test" line="34">
+<kw name="Open browser student registration form" library="homepage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${WEB_URL}</arg>
+<arg>${WEB_BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230410 20:02:10.802" level="INFO">Opening browser 'chrome' to base url 'https://form.jotform.com/212934779973474'.</msg>
+<status status="PASS" starttime="20230410 20:02:10.802" endtime="20230410 20:02:13.979"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230410 20:02:13.979" endtime="20230410 20:02:14.103"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230410 20:02:16.103" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230410 20:02:14.103" endtime="20230410 20:02:16.103"/>
+</kw>
+<status status="PASS" starttime="20230410 20:02:10.797" endtime="20230410 20:02:16.103"/>
+</kw>
+<kw name="Wait student registration load complete" library="homepage">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>//*[@id='header_1']</arg>
+<arg>${test_data_form_name}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20230410 20:02:16.103" endtime="20230410 20:02:16.122"/>
+</kw>
+<status status="PASS" starttime="20230410 20:02:16.103" endtime="20230410 20:02:16.122"/>
+</kw>
+<kw name="Click submit application" library="homepage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id='form-pagebreak-next_76']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230410 20:02:16.122" endtime="20230410 20:02:16.141"/>
+</kw>
+<kw name="Click Element" library="commonKeywords">
+<arg>//*[@id='form-pagebreak-next_76']</arg>
+<doc>${locator} - could be any selenium locator and webelement object
+${timeout} - &lt;optional&gt;
+Make sure that 15 can be accessed globally</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230410 20:02:16.142" endtime="20230410 20:02:16.156"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230410 20:02:16.157" level="INFO">Clicking element '//*[@id='form-pagebreak-next_76']'.</msg>
+<status status="PASS" starttime="20230410 20:02:16.156" endtime="20230410 20:02:16.197"/>
+</kw>
+<status status="PASS" starttime="20230410 20:02:16.142" endtime="20230410 20:02:16.197"/>
+</kw>
+<status status="PASS" starttime="20230410 20:02:16.122" endtime="20230410 20:02:16.197"/>
+</kw>
+<kw name="Verify lastname is required" library="homepage">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>//*[@id='cid_49']//*[@class='form-error-message']</arg>
+<arg>${test_data_error_message}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<msg timestamp="20230410 20:02:21.627" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-182.png"&gt;&lt;img src="selenium-screenshot-182.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230410 20:02:21.627" level="FAIL">Element with locator '//*[@id='cid_49']//*[@class='form-error-message']' not found.</msg>
+<status status="FAIL" starttime="20230410 20:02:16.198" endtime="20230410 20:02:21.627"/>
+</kw>
+<status status="FAIL" starttime="20230410 20:02:16.197" endtime="20230410 20:02:21.627"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230410 20:02:21.627" endtime="20230410 20:02:27.817"/>
+</kw>
+<tag>lastname</tag>
+<status status="FAIL" starttime="20230410 20:02:10.797" endtime="20230410 20:02:27.817">Element with locator '//*[@id='cid_49']//*[@class='form-error-message']' not found.</status>
+</test>
+<test id="s1-t4" name="Gender required test" line="41">
+<kw name="Open browser student registration form" library="homepage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${WEB_URL}</arg>
+<arg>${WEB_BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230410 20:02:27.819" level="INFO">Opening browser 'chrome' to base url 'https://form.jotform.com/212934779973474'.</msg>
+<status status="PASS" starttime="20230410 20:02:27.819" endtime="20230410 20:02:30.677"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230410 20:02:30.677" endtime="20230410 20:02:30.799"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230410 20:02:32.799" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230410 20:02:30.799" endtime="20230410 20:02:32.799"/>
+</kw>
+<status status="PASS" starttime="20230410 20:02:27.819" endtime="20230410 20:02:32.799"/>
+</kw>
+<kw name="Wait student registration load complete" library="homepage">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>//*[@id='header_1']</arg>
+<arg>${test_data_form_name}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20230410 20:02:32.799" endtime="20230410 20:02:32.805"/>
+</kw>
+<status status="PASS" starttime="20230410 20:02:32.799" endtime="20230410 20:02:32.805"/>
+</kw>
+<kw name="Click submit application" library="homepage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id='form-pagebreak-next_76']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230410 20:02:32.805" endtime="20230410 20:02:32.826"/>
+</kw>
+<kw name="Click Element" library="commonKeywords">
+<arg>//*[@id='form-pagebreak-next_76']</arg>
+<doc>${locator} - could be any selenium locator and webelement object
+${timeout} - &lt;optional&gt;
+Make sure that 15 can be accessed globally</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230410 20:02:32.836" endtime="20230410 20:02:32.849"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230410 20:02:32.849" level="INFO">Clicking element '//*[@id='form-pagebreak-next_76']'.</msg>
+<status status="PASS" starttime="20230410 20:02:32.849" endtime="20230410 20:02:32.888"/>
+</kw>
+<status status="PASS" starttime="20230410 20:02:32.826" endtime="20230410 20:02:32.889"/>
+</kw>
+<status status="PASS" starttime="20230410 20:02:32.805" endtime="20230410 20:02:32.889"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230410 20:02:32.890" endtime="20230410 20:02:39.152"/>
+</kw>
+<tag>gender</tag>
+<status status="PASS" starttime="20230410 20:02:27.817" endtime="20230410 20:02:39.152"/>
+</test>
+<test id="s1-t5" name="Student ID required test" line="47">
+<kw name="Open browser student registration form" library="homepage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${WEB_URL}</arg>
+<arg>${WEB_BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230410 20:02:39.159" level="INFO">Opening browser 'chrome' to base url 'https://form.jotform.com/212934779973474'.</msg>
+<status status="PASS" starttime="20230410 20:02:39.159" endtime="20230410 20:02:41.892"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230410 20:02:41.892" endtime="20230410 20:02:42.011"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230410 20:02:44.011" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230410 20:02:42.011" endtime="20230410 20:02:44.011"/>
+</kw>
+<status status="PASS" starttime="20230410 20:02:39.152" endtime="20230410 20:02:44.011"/>
+</kw>
+<kw name="Wait student registration load complete" library="homepage">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>//*[@id='header_1']</arg>
+<arg>${test_data_form_name}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20230410 20:02:44.011" endtime="20230410 20:02:44.030"/>
+</kw>
+<status status="PASS" starttime="20230410 20:02:44.011" endtime="20230410 20:02:44.030"/>
+</kw>
+<kw name="Click submit application" library="homepage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id='form-pagebreak-next_76']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230410 20:02:44.030" endtime="20230410 20:02:44.049"/>
+</kw>
+<kw name="Click Element" library="commonKeywords">
+<arg>//*[@id='form-pagebreak-next_76']</arg>
+<doc>${locator} - could be any selenium locator and webelement object
+${timeout} - &lt;optional&gt;
+Make sure that 15 can be accessed globally</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230410 20:02:44.050" endtime="20230410 20:02:44.063"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230410 20:02:44.064" level="INFO">Clicking element '//*[@id='form-pagebreak-next_76']'.</msg>
+<status status="PASS" starttime="20230410 20:02:44.064" endtime="20230410 20:02:44.103"/>
+</kw>
+<status status="PASS" starttime="20230410 20:02:44.050" endtime="20230410 20:02:44.105"/>
+</kw>
+<status status="PASS" starttime="20230410 20:02:44.030" endtime="20230410 20:02:44.105"/>
+</kw>
+<kw name="Verify student_id is required" library="homepage">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>//*[@id='id_14']//*[@class='form-error-message']</arg>
+<arg>${test_data_error_message}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20230410 20:02:44.105" endtime="20230410 20:02:44.110"/>
+</kw>
+<status status="PASS" starttime="20230410 20:02:44.105" endtime="20230410 20:02:44.110"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230410 20:02:44.110" endtime="20230410 20:02:50.333"/>
+</kw>
+<tag>student_id</tag>
+<status status="PASS" starttime="20230410 20:02:39.152" endtime="20230410 20:02:50.333"/>
+</test>
+<test id="s1-t6" name="Mobile Number required test" line="54">
+<kw name="Open browser student registration form" library="homepage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${WEB_URL}</arg>
+<arg>${WEB_BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230410 20:02:50.339" level="INFO">Opening browser 'chrome' to base url 'https://form.jotform.com/212934779973474'.</msg>
+<status status="PASS" starttime="20230410 20:02:50.338" endtime="20230410 20:02:53.428"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230410 20:02:53.428" endtime="20230410 20:02:53.551"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230410 20:02:55.551" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230410 20:02:53.551" endtime="20230410 20:02:55.551"/>
+</kw>
+<status status="PASS" starttime="20230410 20:02:50.338" endtime="20230410 20:02:55.551"/>
+</kw>
+<kw name="Wait student registration load complete" library="homepage">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>//*[@id='header_1']</arg>
+<arg>${test_data_form_name}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20230410 20:02:55.551" endtime="20230410 20:02:55.557"/>
+</kw>
+<status status="PASS" starttime="20230410 20:02:55.551" endtime="20230410 20:02:55.557"/>
+</kw>
+<kw name="Click submit application" library="homepage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id='form-pagebreak-next_76']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230410 20:02:55.557" endtime="20230410 20:02:55.587"/>
+</kw>
+<kw name="Click Element" library="commonKeywords">
+<arg>//*[@id='form-pagebreak-next_76']</arg>
+<doc>${locator} - could be any selenium locator and webelement object
+${timeout} - &lt;optional&gt;
+Make sure that 15 can be accessed globally</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230410 20:02:55.589" endtime="20230410 20:02:55.601"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230410 20:02:55.602" level="INFO">Clicking element '//*[@id='form-pagebreak-next_76']'.</msg>
+<status status="PASS" starttime="20230410 20:02:55.601" endtime="20230410 20:02:55.644"/>
+</kw>
+<status status="PASS" starttime="20230410 20:02:55.588" endtime="20230410 20:02:55.644"/>
+</kw>
+<status status="PASS" starttime="20230410 20:02:55.557" endtime="20230410 20:02:55.644"/>
+</kw>
+<kw name="Verify mobile_number is required" library="homepage">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>//*[@id='cid_27']//*[@class='form-error-message']</arg>
+<arg>${test_data_error_message}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20230410 20:02:55.645" endtime="20230410 20:02:55.652"/>
+</kw>
+<status status="PASS" starttime="20230410 20:02:55.645" endtime="20230410 20:02:55.652"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230410 20:02:55.652" endtime="20230410 20:03:01.888"/>
+</kw>
+<tag>mobile_number</tag>
+<status status="PASS" starttime="20230410 20:02:50.333" endtime="20230410 20:03:01.889"/>
+</test>
+<test id="s1-t7" name="Email required test" line="61">
+<kw name="Open browser student registration form" library="homepage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${WEB_URL}</arg>
+<arg>${WEB_BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230410 20:03:01.892" level="INFO">Opening browser 'chrome' to base url 'https://form.jotform.com/212934779973474'.</msg>
+<status status="PASS" starttime="20230410 20:03:01.891" endtime="20230410 20:03:04.706"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230410 20:03:04.706" endtime="20230410 20:03:04.829"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230410 20:03:06.830" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230410 20:03:04.829" endtime="20230410 20:03:06.830"/>
+</kw>
+<status status="PASS" starttime="20230410 20:03:01.891" endtime="20230410 20:03:06.830"/>
+</kw>
+<kw name="Wait student registration load complete" library="homepage">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>//*[@id='header_1']</arg>
+<arg>${test_data_form_name}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20230410 20:03:06.831" endtime="20230410 20:03:06.848"/>
+</kw>
+<status status="PASS" starttime="20230410 20:03:06.831" endtime="20230410 20:03:06.848"/>
+</kw>
+<kw name="Click submit application" library="homepage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id='form-pagebreak-next_76']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230410 20:03:06.848" endtime="20230410 20:03:06.863"/>
+</kw>
+<kw name="Click Element" library="commonKeywords">
+<arg>//*[@id='form-pagebreak-next_76']</arg>
+<doc>${locator} - could be any selenium locator and webelement object
+${timeout} - &lt;optional&gt;
+Make sure that 15 can be accessed globally</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230410 20:03:06.863" endtime="20230410 20:03:06.880"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230410 20:03:06.880" level="INFO">Clicking element '//*[@id='form-pagebreak-next_76']'.</msg>
+<status status="PASS" starttime="20230410 20:03:06.880" endtime="20230410 20:03:06.921"/>
+</kw>
+<status status="PASS" starttime="20230410 20:03:06.863" endtime="20230410 20:03:06.921"/>
+</kw>
+<status status="PASS" starttime="20230410 20:03:06.848" endtime="20230410 20:03:06.921"/>
+</kw>
+<kw name="Verify email is required" library="homepage">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>//*[@id='cid_6']//*[@class='form-error-message']</arg>
+<arg>${test_data_error_message}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20230410 20:03:06.923" endtime="20230410 20:03:06.942"/>
+</kw>
+<status status="PASS" starttime="20230410 20:03:06.923" endtime="20230410 20:03:06.942"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230410 20:03:06.944" endtime="20230410 20:03:13.148"/>
+</kw>
+<tag>email</tag>
+<status status="PASS" starttime="20230410 20:03:01.891" endtime="20230410 20:03:13.148"/>
+</test>
+<test id="s1-t8" name="Study Time required test" line="68">
+<kw name="Open browser student registration form" library="homepage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${WEB_URL}</arg>
+<arg>${WEB_BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230410 20:03:13.154" level="INFO">Opening browser 'chrome' to base url 'https://form.jotform.com/212934779973474'.</msg>
+<status status="PASS" starttime="20230410 20:03:13.154" endtime="20230410 20:03:16.064"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230410 20:03:16.064" endtime="20230410 20:03:16.190"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230410 20:03:18.192" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230410 20:03:16.190" endtime="20230410 20:03:18.192"/>
+</kw>
+<status status="PASS" starttime="20230410 20:03:13.148" endtime="20230410 20:03:18.192"/>
+</kw>
+<kw name="Wait student registration load complete" library="homepage">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>//*[@id='header_1']</arg>
+<arg>${test_data_form_name}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20230410 20:03:18.192" endtime="20230410 20:03:18.211"/>
+</kw>
+<status status="PASS" starttime="20230410 20:03:18.192" endtime="20230410 20:03:18.211"/>
+</kw>
+<kw name="Click submit application" library="homepage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id='form-pagebreak-next_76']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230410 20:03:18.211" endtime="20230410 20:03:18.229"/>
+</kw>
+<kw name="Click Element" library="commonKeywords">
+<arg>//*[@id='form-pagebreak-next_76']</arg>
+<doc>${locator} - could be any selenium locator and webelement object
+${timeout} - &lt;optional&gt;
+Make sure that 15 can be accessed globally</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230410 20:03:18.231" endtime="20230410 20:03:18.246"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230410 20:03:18.246" level="INFO">Clicking element '//*[@id='form-pagebreak-next_76']'.</msg>
+<status status="PASS" starttime="20230410 20:03:18.246" endtime="20230410 20:03:18.286"/>
+</kw>
+<status status="PASS" starttime="20230410 20:03:18.231" endtime="20230410 20:03:18.286"/>
+</kw>
+<status status="PASS" starttime="20230410 20:03:18.211" endtime="20230410 20:03:18.286"/>
+</kw>
+<kw name="Verify study time is required" library="homepage">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>//*[@id='cid_51']//*[@class='form-error-message']</arg>
+<arg>${test_data_error_message}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20230410 20:03:18.287" endtime="20230410 20:03:18.310"/>
+</kw>
+<status status="PASS" starttime="20230410 20:03:18.287" endtime="20230410 20:03:18.310"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230410 20:03:18.310" endtime="20230410 20:03:24.489"/>
+</kw>
+<tag>study_time</tag>
+<status status="PASS" starttime="20230410 20:03:13.148" endtime="20230410 20:03:24.489"/>
+</test>
+<test id="s1-t9" name="Invalid First Name Type Test" line="76">
+<kw name="Open browser student registration form" library="homepage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${WEB_URL}</arg>
+<arg>${WEB_BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230410 20:03:24.497" level="INFO">Opening browser 'chrome' to base url 'https://form.jotform.com/212934779973474'.</msg>
+<status status="PASS" starttime="20230410 20:03:24.497" endtime="20230410 20:03:27.218"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230410 20:03:27.219" endtime="20230410 20:03:27.332"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230410 20:03:29.333" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230410 20:03:27.332" endtime="20230410 20:03:29.333"/>
+</kw>
+<status status="PASS" starttime="20230410 20:03:24.497" endtime="20230410 20:03:29.333"/>
+</kw>
+<kw name="Wait student registration load complete" library="homepage">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>//*[@id='header_1']</arg>
+<arg>${test_data_form_name}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20230410 20:03:29.333" endtime="20230410 20:03:29.350"/>
+</kw>
+<status status="PASS" starttime="20230410 20:03:29.333" endtime="20230410 20:03:29.350"/>
+</kw>
+<kw name="Input firstname with number" library="homepage">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id='input_48']</arg>
+<arg>123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230410 20:03:29.351" level="INFO">Typing text '123' into text field '//*[@id='input_48']'.</msg>
+<status status="PASS" starttime="20230410 20:03:29.351" endtime="20230410 20:03:29.405"/>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<var>${firstname}</var>
+<arg>//*[@id='input_48']</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<msg timestamp="20230410 20:03:29.419" level="INFO">${firstname} = 123</msg>
+<status status="PASS" starttime="20230410 20:03:29.405" endtime="20230410 20:03:29.419"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${firstname}</arg>
+<arg>${EMPTY}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<msg timestamp="20230410 20:03:29.420" level="FAIL">123 != </msg>
+<status status="FAIL" starttime="20230410 20:03:29.419" endtime="20230410 20:03:29.420"/>
+</kw>
+<status status="FAIL" starttime="20230410 20:03:29.351" endtime="20230410 20:03:29.421"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230410 20:03:29.421" endtime="20230410 20:03:35.611"/>
+</kw>
+<tag>firstname</tag>
+<status status="FAIL" starttime="20230410 20:03:24.489" endtime="20230410 20:03:35.611">123 != </status>
+</test>
+<test id="s1-t10" name="Invalid Last Name Type Test" line="81">
+<kw name="Open browser student registration form" library="homepage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${WEB_URL}</arg>
+<arg>${WEB_BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230410 20:03:35.616" level="INFO">Opening browser 'chrome' to base url 'https://form.jotform.com/212934779973474'.</msg>
+<status status="PASS" starttime="20230410 20:03:35.616" endtime="20230410 20:03:38.512"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230410 20:03:38.512" endtime="20230410 20:03:38.640"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230410 20:03:40.640" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230410 20:03:38.640" endtime="20230410 20:03:40.640"/>
+</kw>
+<status status="PASS" starttime="20230410 20:03:35.616" endtime="20230410 20:03:40.640"/>
+</kw>
+<kw name="Wait student registration load complete" library="homepage">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>//*[@id='header_1']</arg>
+<arg>${test_data_form_name}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20230410 20:03:40.640" endtime="20230410 20:03:40.648"/>
+</kw>
+<status status="PASS" starttime="20230410 20:03:40.640" endtime="20230410 20:03:40.648"/>
+</kw>
+<kw name="Input lastname with number" library="homepage">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id='input_49']</arg>
+<arg>123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230410 20:03:40.648" level="INFO">Typing text '123' into text field '//*[@id='input_49']'.</msg>
+<status status="PASS" starttime="20230410 20:03:40.648" endtime="20230410 20:03:40.715"/>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<var>${lastname}</var>
+<arg>//*[@id='input_49']</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<msg timestamp="20230410 20:03:40.743" level="INFO">${lastname} = 123</msg>
+<status status="PASS" starttime="20230410 20:03:40.715" endtime="20230410 20:03:40.743"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${lastname}</arg>
+<arg>${EMPTY}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<msg timestamp="20230410 20:03:40.743" level="FAIL">123 != </msg>
+<status status="FAIL" starttime="20230410 20:03:40.743" endtime="20230410 20:03:40.743"/>
+</kw>
+<status status="FAIL" starttime="20230410 20:03:40.648" endtime="20230410 20:03:40.743"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230410 20:03:40.743" endtime="20230410 20:03:46.922"/>
+</kw>
+<tag>lastname</tag>
+<status status="FAIL" starttime="20230410 20:03:35.611" endtime="20230410 20:03:46.922">123 != </status>
+</test>
+<test id="s1-t11" name="Invalid StudentId Type Test" line="87">
+<kw name="Open browser student registration form" library="homepage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${WEB_URL}</arg>
+<arg>${WEB_BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230410 20:03:46.929" level="INFO">Opening browser 'chrome' to base url 'https://form.jotform.com/212934779973474'.</msg>
+<status status="PASS" starttime="20230410 20:03:46.929" endtime="20230410 20:03:49.768"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230410 20:03:49.768" endtime="20230410 20:03:49.889"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230410 20:03:51.889" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230410 20:03:49.889" endtime="20230410 20:03:51.889"/>
+</kw>
+<status status="PASS" starttime="20230410 20:03:46.929" endtime="20230410 20:03:51.889"/>
+</kw>
+<kw name="Wait student registration load complete" library="homepage">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>//*[@id='header_1']</arg>
+<arg>${test_data_form_name}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20230410 20:03:51.889" endtime="20230410 20:03:51.909"/>
+</kw>
+<status status="PASS" starttime="20230410 20:03:51.889" endtime="20230410 20:03:51.909"/>
+</kw>
+<kw name="Input student_id with character" library="homepage">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id='input_14']</arg>
+<arg>abc</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230410 20:03:51.910" level="INFO">Typing text 'abc' into text field '//*[@id='input_14']'.</msg>
+<status status="PASS" starttime="20230410 20:03:51.909" endtime="20230410 20:03:51.969"/>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<var>${student_id}</var>
+<arg>//*[@id='input_14']</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<msg timestamp="20230410 20:03:51.984" level="INFO">${student_id} = abc</msg>
+<status status="PASS" starttime="20230410 20:03:51.969" endtime="20230410 20:03:51.984"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${student_id}</arg>
+<arg>${EMPTY}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<msg timestamp="20230410 20:03:51.985" level="FAIL">abc != </msg>
+<status status="FAIL" starttime="20230410 20:03:51.984" endtime="20230410 20:03:51.985"/>
+</kw>
+<status status="FAIL" starttime="20230410 20:03:51.909" endtime="20230410 20:03:51.985"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230410 20:03:51.986" endtime="20230410 20:03:58.151"/>
+</kw>
+<tag>student_id</tag>
+<status status="FAIL" starttime="20230410 20:03:46.922" endtime="20230410 20:03:58.151">abc != </status>
+</test>
+<test id="s1-t12" name="Invalid Mobile Number Type Test" line="93">
+<kw name="Open browser student registration form" library="homepage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${WEB_URL}</arg>
+<arg>${WEB_BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230410 20:03:58.155" level="INFO">Opening browser 'chrome' to base url 'https://form.jotform.com/212934779973474'.</msg>
+<status status="PASS" starttime="20230410 20:03:58.155" endtime="20230410 20:04:00.944"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230410 20:04:00.944" endtime="20230410 20:04:01.073"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230410 20:04:03.074" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230410 20:04:01.074" endtime="20230410 20:04:03.074"/>
+</kw>
+<status status="PASS" starttime="20230410 20:03:58.155" endtime="20230410 20:04:03.074"/>
+</kw>
+<kw name="Wait student registration load complete" library="homepage">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>//*[@id='header_1']</arg>
+<arg>${test_data_form_name}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20230410 20:04:03.074" endtime="20230410 20:04:03.098"/>
+</kw>
+<status status="PASS" starttime="20230410 20:04:03.074" endtime="20230410 20:04:03.099"/>
+</kw>
+<kw name="Input mobile_number with character" library="homepage">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id='input_27_full']</arg>
+<arg>abc</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230410 20:04:03.099" level="INFO">Typing text 'abc' into text field '//*[@id='input_27_full']'.</msg>
+<status status="PASS" starttime="20230410 20:04:03.099" endtime="20230410 20:04:03.172"/>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<var>${mobile_number}</var>
+<arg>//*[@id='input_27_full']</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<msg timestamp="20230410 20:04:03.188" level="INFO">${mobile_number} = </msg>
+<status status="PASS" starttime="20230410 20:04:03.172" endtime="20230410 20:04:03.188"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${mobile_number}</arg>
+<arg>${EMPTY}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230410 20:04:03.188" endtime="20230410 20:04:03.188"/>
+</kw>
+<status status="PASS" starttime="20230410 20:04:03.099" endtime="20230410 20:04:03.188"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230410 20:04:03.188" endtime="20230410 20:04:09.318"/>
+</kw>
+<tag>mobile_number</tag>
+<status status="PASS" starttime="20230410 20:03:58.151" endtime="20230410 20:04:09.319"/>
+</test>
+<test id="s1-t13" name="Verify after submit message" line="100">
+<kw name="Open browser student registration form" library="homepage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${WEB_URL}</arg>
+<arg>${WEB_BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230410 20:04:09.321" level="INFO">Opening browser 'chrome' to base url 'https://form.jotform.com/212934779973474'.</msg>
+<status status="PASS" starttime="20230410 20:04:09.320" endtime="20230410 20:04:12.091"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230410 20:04:12.091" endtime="20230410 20:04:12.208"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230410 20:04:14.209" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230410 20:04:12.209" endtime="20230410 20:04:14.209"/>
+</kw>
+<status status="PASS" starttime="20230410 20:04:09.320" endtime="20230410 20:04:14.209"/>
+</kw>
+<kw name="Wait student registration load complete" library="homepage">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>//*[@id='header_1']</arg>
+<arg>${test_data_form_name}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20230410 20:04:14.209" endtime="20230410 20:04:14.227"/>
+</kw>
+<status status="PASS" starttime="20230410 20:04:14.209" endtime="20230410 20:04:14.227"/>
+</kw>
+<kw name="Input and verify firstname" library="homepage">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id='input_48']</arg>
+<arg>${test_data_firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230410 20:04:14.229" level="INFO">Typing text 'studentFirstName' into text field '//*[@id='input_48']'.</msg>
+<status status="PASS" starttime="20230410 20:04:14.228" endtime="20230410 20:04:14.278"/>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<var>${firstname}</var>
+<arg>//*[@id='input_48']</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<msg timestamp="20230410 20:04:14.307" level="INFO">${firstname} = studentFirstName</msg>
+<status status="PASS" starttime="20230410 20:04:14.278" endtime="20230410 20:04:14.307"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${firstname}</arg>
+<arg>${test_data_firstname}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230410 20:04:14.307" endtime="20230410 20:04:14.307"/>
+</kw>
+<status status="PASS" starttime="20230410 20:04:14.227" endtime="20230410 20:04:14.307"/>
+</kw>
+<kw name="Input and verify lastname" library="homepage">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id='input_49']</arg>
+<arg>${test_data_firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230410 20:04:14.307" level="INFO">Typing text 'studentFirstName' into text field '//*[@id='input_49']'.</msg>
+<status status="PASS" starttime="20230410 20:04:14.307" endtime="20230410 20:04:14.374"/>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<var>${lastname}</var>
+<arg>//*[@id='input_49']</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<msg timestamp="20230410 20:04:14.382" level="INFO">${lastname} = studentFirstName</msg>
+<status status="PASS" starttime="20230410 20:04:14.374" endtime="20230410 20:04:14.382"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${lastname}</arg>
+<arg>${test_data_firstname}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230410 20:04:14.382" endtime="20230410 20:04:14.382"/>
+</kw>
+<status status="PASS" starttime="20230410 20:04:14.307" endtime="20230410 20:04:14.382"/>
+</kw>
+<kw name="Input and verify gender with male" library="homepage">
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>//*[@id='input_3']</arg>
+<arg>${test_data_gender}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20230410 20:04:14.388" level="INFO">Selecting options from selection list '//*[@id='input_3']' by value Male.</msg>
+<status status="PASS" starttime="20230410 20:04:14.382" endtime="20230410 20:04:14.438"/>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<var>${gender}</var>
+<arg>//*[@id='input_3']</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<msg timestamp="20230410 20:04:14.444" level="INFO">${gender} = Male</msg>
+<status status="PASS" starttime="20230410 20:04:14.438" endtime="20230410 20:04:14.444"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${gender}</arg>
+<arg>${test_data_gender}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230410 20:04:14.444" endtime="20230410 20:04:14.444"/>
+</kw>
+<status status="PASS" starttime="20230410 20:04:14.382" endtime="20230410 20:04:14.444"/>
+</kw>
+<kw name="Input and verify student_id" library="homepage">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id='input_14']</arg>
+<arg>${test_data_student_id}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230410 20:04:14.444" level="INFO">Typing text '6299999999' into text field '//*[@id='input_14']'.</msg>
+<status status="PASS" starttime="20230410 20:04:14.444" endtime="20230410 20:04:14.523"/>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<var>${student_id}</var>
+<arg>//*[@id='input_14']</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<msg timestamp="20230410 20:04:14.541" level="INFO">${student_id} = 6299999999</msg>
+<status status="PASS" starttime="20230410 20:04:14.523" endtime="20230410 20:04:14.541"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${student_id}</arg>
+<arg>${test_data_student_id}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230410 20:04:14.541" endtime="20230410 20:04:14.548"/>
+</kw>
+<status status="PASS" starttime="20230410 20:04:14.444" endtime="20230410 20:04:14.548"/>
+</kw>
+<kw name="Input and verify mobile_number" library="homepage">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id='input_27_full']</arg>
+<arg>${test_data_mobile_number}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230410 20:04:14.549" level="INFO">Typing text '0899999999' into text field '//*[@id='input_27_full']'.</msg>
+<status status="PASS" starttime="20230410 20:04:14.549" endtime="20230410 20:04:14.645"/>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<var>${mobile_number}</var>
+<arg>//*[@id='input_27_full']</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<msg timestamp="20230410 20:04:14.652" level="INFO">${mobile_number} = (089) 999-9999</msg>
+<status status="PASS" starttime="20230410 20:04:14.645" endtime="20230410 20:04:14.652"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${mobile_number}</arg>
+<arg>(089) 999-9999</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230410 20:04:14.652" endtime="20230410 20:04:14.652"/>
+</kw>
+<status status="PASS" starttime="20230410 20:04:14.549" endtime="20230410 20:04:14.652"/>
+</kw>
+<kw name="Input and verify email" library="homepage">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id='input_6']</arg>
+<arg>${test_data_email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230410 20:04:14.652" level="INFO">Typing text 'studentName@chula.ac.th' into text field '//*[@id='input_6']'.</msg>
+<status status="PASS" starttime="20230410 20:04:14.652" endtime="20230410 20:04:14.724"/>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<var>${email}</var>
+<arg>//*[@id='input_6']</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<msg timestamp="20230410 20:04:14.735" level="INFO">${email} = studentName@chula.ac.th</msg>
+<status status="PASS" starttime="20230410 20:04:14.724" endtime="20230410 20:04:14.735"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${email}</arg>
+<arg>${test_data_email}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230410 20:04:14.735" endtime="20230410 20:04:14.735"/>
+</kw>
+<status status="PASS" starttime="20230410 20:04:14.652" endtime="20230410 20:04:14.735"/>
+</kw>
+<kw name="Click study time" library="homepage">
+<kw name="Click Element" library="commonKeywords">
+<arg>//*[@id='label_input_51_0']</arg>
+<doc>${locator} - could be any selenium locator and webelement object
+${timeout} - &lt;optional&gt;
+Make sure that 15 can be accessed globally</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230410 20:04:14.735" endtime="20230410 20:04:14.753"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230410 20:04:14.753" level="INFO">Clicking element '//*[@id='label_input_51_0']'.</msg>
+<status status="PASS" starttime="20230410 20:04:14.753" endtime="20230410 20:04:14.784"/>
+</kw>
+<status status="PASS" starttime="20230410 20:04:14.735" endtime="20230410 20:04:14.784"/>
+</kw>
+<status status="PASS" starttime="20230410 20:04:14.735" endtime="20230410 20:04:14.785"/>
+</kw>
+<kw name="Click submit application" library="homepage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id='form-pagebreak-next_76']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230410 20:04:14.785" endtime="20230410 20:04:14.807"/>
+</kw>
+<kw name="Click Element" library="commonKeywords">
+<arg>//*[@id='form-pagebreak-next_76']</arg>
+<doc>${locator} - could be any selenium locator and webelement object
+${timeout} - &lt;optional&gt;
+Make sure that 15 can be accessed globally</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230410 20:04:14.809" endtime="20230410 20:04:14.825"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230410 20:04:14.826" level="INFO">Clicking element '//*[@id='form-pagebreak-next_76']'.</msg>
+<status status="PASS" starttime="20230410 20:04:14.825" endtime="20230410 20:04:14.862"/>
+</kw>
+<status status="PASS" starttime="20230410 20:04:14.809" endtime="20230410 20:04:14.862"/>
+</kw>
+<status status="PASS" starttime="20230410 20:04:14.785" endtime="20230410 20:04:14.862"/>
+</kw>
+<kw name="Verify after click submit application, it will show message" library="homepage">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>//*[@id='cid_84']</arg>
+<arg>${test_data_sccess_submit_message}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<msg timestamp="20230410 20:04:20.419" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-183.png"&gt;&lt;img src="selenium-screenshot-183.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230410 20:04:20.419" level="FAIL">Element '//*[@id='cid_84']' did not get text 'Your registration has been completed' in 5 seconds.</msg>
+<status status="FAIL" starttime="20230410 20:04:14.862" endtime="20230410 20:04:20.419"/>
+</kw>
+<status status="FAIL" starttime="20230410 20:04:14.862" endtime="20230410 20:04:20.419"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230410 20:04:20.419" endtime="20230410 20:04:26.595"/>
+</kw>
+<tag>submit</tag>
+<status status="FAIL" starttime="20230410 20:04:09.320" endtime="20230410 20:04:26.595">Element '//*[@id='cid_84']' did not get text 'Your registration has been completed' in 5 seconds.</status>
+</test>
+<status status="FAIL" starttime="20230410 20:01:46.344" endtime="20230410 20:04:26.602"/>
+</suite>
+<statistics>
+<total>
+<stat pass="8" fail="5" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">all input</stat>
+<stat pass="1" fail="0" skip="0">email</stat>
+<stat pass="1" fail="1" skip="0">firstname</stat>
+<stat pass="1" fail="0" skip="0">gender</stat>
+<stat pass="0" fail="2" skip="0">lastname</stat>
+<stat pass="2" fail="0" skip="0">mobile_number</stat>
+<stat pass="1" fail="1" skip="0">student_id</stat>
+<stat pass="1" fail="0" skip="0">study_time</stat>
+<stat pass="0" fail="1" skip="0">submit</stat>
+</tag>
+<suite>
+<stat pass="8" fail="5" skip="0" id="s1" name="Simple">Simple</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
